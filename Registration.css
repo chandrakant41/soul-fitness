@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-image: linear-gradient(to bottom, rgba(145, 149, 150, 0.244), rgba(134, 131, 132, 0.348)), url(home.jpg);
+  
+}
+header{
+    width: 100%;
+    position: fixed;
+    padding: 10px 0;
+    max-height: 300px;
+    
+}
+header{
+    top: 10px;
+    margin-left: 85% ;
+    margin-bottom: 10%;
+}
+.h1{
+    color:#fff000;
+    font-size: 30px;
+}
+.logo p {
+    color: #ffff;
+    font-size: 30px;
+    float: left;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+   
+}
+
+.container {
+    max-width: 700px;
+   width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+.container .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+   width: 30px;
+    background: #fff000;
+}
+
+.container from .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+from .user-details .input-box {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+.user-details .input-box .details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+    border-color: #9b9b9b;
+}
+
+from .gender-details .gender-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+from .gender-details .categories {
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+
+.gender-details .categories label {
+    display: flex;
+    align-items: center;
+}
+
+.gender-details .categories .dot {
+    height: 18px;
+    width: 18px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#dot-1:checked~.categories label .one,
+#dot-2:checked~.categories label .two,
+#dot-3:checked~.categories label .three {
+    border-color: #d9d9d9;
+    background: #9b59b6;
+}
+
+from input[type="radio"] {
+    display: none;
+}
+
+from .button {
+    height: 45px;
+    margin: 45px 0;
+}
+from .button input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #000;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background:linear-gradient(135deg,#fff000,hsl(60, 81%, 69%));
+}
+from .button input:hover{
+   background:  linear-gradient(-135deg,#fff000,hsl(60, 81%, 69%));
+}
+@media (max-width:584px){
+    header{
+        max-height: 300px;
+        margin-bottom: 15px;
+        max-width:100%;
+    }
+    .container {
+        max-width: 100%;
+    }
+    from .user-details .input-box {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    from .gender-details .categories {
+        width: 100%;
+    }
+    .container from .user-details{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    .user-details::-webkit-scrollbar{
+        width: 0;
+    }
+}
+
+
